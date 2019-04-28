@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  lightyear.shoppingcart.api:
+    image: ${DOCKER_REGISTRY-}lightyearshoppingcart
+    build:
+      context: .
+      dockerfile: Lightyear.ShoppingCart.API/Dockerfile

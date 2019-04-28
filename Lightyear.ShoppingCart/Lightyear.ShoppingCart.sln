@@ -1,0 +1,47 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lightyear.ShoppingCart.API", "Lightyear.ShoppingCart.API\Lightyear.ShoppingCart.API.csproj", "{0A22BF99-7A7F-4F61-B18E-97CCFAF1EA6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lightyear.ShoppingCart.Domain", "Lightyear.ShoppingCart.Domain\Lightyear.ShoppingCart.Domain.csproj", "{FCA3D726-45B4-4F44-B648-8B11840368C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lightyear.ShoppingCart.Infra", "Lightyear.ShoppingCart.Infra\Lightyear.ShoppingCart.Infra.csproj", "{F9189F5B-1541-4EFE-9958-5E823308D970}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lightyear.ShoppingCart.Application", "Lightyear.ShoppingCart.Application\Lightyear.ShoppingCart.Application.csproj", "{9489D2A7-2292-430C-BB76-830E29A369E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lightyear.ShoppingCart.IoC", "Lightyear.ShoppingCart.IoC\Lightyear.ShoppingCart.IoC.csproj", "{CACA705F-8DEC-40BF-B8E9-5E8E298EA0F5}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{A5CD90D1-8D45-4016-989B-F8EEA4C58DAD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0A22BF99-7A7F-4F61-B18E-97CCFAF1EA6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A22BF99-7A7F-4F61-B18E-97CCFAF1EA6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A22BF99-7A7F-4F61-B18E-97CCFAF1EA6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A22BF99-7A7F-4F61-B18E-97CCFAF1EA6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCA3D726-45B4-4F44-B648-8B11840368C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCA3D726-45B4-4F44-B648-8B11840368C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCA3D726-45B4-4F44-B648-8B11840368C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCA3D726-45B4-4F44-B648-8B11840368C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9189F5B-1541-4EFE-9958-5E823308D970}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9189F5B-1541-4EFE-9958-5E823308D970}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9189F5B-1541-4EFE-9958-5E823308D970}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9189F5B-1541-4EFE-9958-5E823308D970}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9489D2A7-2292-430C-BB76-830E29A369E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9489D2A7-2292-430C-BB76-830E29A369E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9489D2A7-2292-430C-BB76-830E29A369E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9489D2A7-2292-430C-BB76-830E29A369E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CACA705F-8DEC-40BF-B8E9-5E8E298EA0F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CACA705F-8DEC-40BF-B8E9-5E8E298EA0F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CACA705F-8DEC-40BF-B8E9-5E8E298EA0F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CACA705F-8DEC-40BF-B8E9-5E8E298EA0F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5CD90D1-8D45-4016-989B-F8EEA4C58DAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5CD90D1-8D45-4016-989B-F8EEA4C58DAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5CD90D1-8D45-4016-989B-F8EEA4C58DAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5CD90D1-8D45-4016-989B-F8EEA4C58DAD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

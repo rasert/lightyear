@@ -1,0 +1,9 @@
+version: '3.4'
+
+services:
+  lightyear.catalog.api:
+    image: ${DOCKER_REGISTRY-}lightyearcatalog
+    build:
+      context: .
+      dockerfile: Lightyear.Catalog.API/Dockerfile
+

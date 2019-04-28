@@ -1,0 +1,49 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lightyear.Catalog.API", "Lightyear.Catalog.API\Lightyear.Catalog.API.csproj", "{88488ADB-99DD-4CB4-B7AD-2BCD72889FDB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lightyear.Catalog.Domain", "Lightyear.Catalog.Domain\Lightyear.Catalog.Domain.csproj", "{CC3CA38B-65D6-4198-9806-25AA8A3E5D24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lightyear.Catalog.Application", "Lightyear.Catalog.Application\Lightyear.Catalog.Application.csproj", "{8DC17781-234B-4905-B394-84832A671078}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lightyear.Catalog.Infra", "Lightyear.Catalog.Infra\Lightyear.Catalog.Infra.csproj", "{71EEA7A3-0516-4550-A8E0-F954953C95C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lightyear.Catalog.IoC", "Lightyear.Catalog.IoC\Lightyear.Catalog.IoC.csproj", "{FF200F20-9CCE-41A6-A5DC-653F77A8C082}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{D497B1A6-612F-4AFE-A35F-92200796C996}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{88488ADB-99DD-4CB4-B7AD-2BCD72889FDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88488ADB-99DD-4CB4-B7AD-2BCD72889FDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88488ADB-99DD-4CB4-B7AD-2BCD72889FDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88488ADB-99DD-4CB4-B7AD-2BCD72889FDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC3CA38B-65D6-4198-9806-25AA8A3E5D24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC3CA38B-65D6-4198-9806-25AA8A3E5D24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC3CA38B-65D6-4198-9806-25AA8A3E5D24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC3CA38B-65D6-4198-9806-25AA8A3E5D24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DC17781-234B-4905-B394-84832A671078}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DC17781-234B-4905-B394-84832A671078}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DC17781-234B-4905-B394-84832A671078}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DC17781-234B-4905-B394-84832A671078}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71EEA7A3-0516-4550-A8E0-F954953C95C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71EEA7A3-0516-4550-A8E0-F954953C95C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71EEA7A3-0516-4550-A8E0-F954953C95C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71EEA7A3-0516-4550-A8E0-F954953C95C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF200F20-9CCE-41A6-A5DC-653F77A8C082}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF200F20-9CCE-41A6-A5DC-653F77A8C082}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF200F20-9CCE-41A6-A5DC-653F77A8C082}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF200F20-9CCE-41A6-A5DC-653F77A8C082}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D497B1A6-612F-4AFE-A35F-92200796C996}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D497B1A6-612F-4AFE-A35F-92200796C996}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D497B1A6-612F-4AFE-A35F-92200796C996}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D497B1A6-612F-4AFE-A35F-92200796C996}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+	EndGlobalSection
+EndGlobal
