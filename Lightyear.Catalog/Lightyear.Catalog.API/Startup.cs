@@ -1,4 +1,8 @@
-﻿using Lightyear.Catalog.IoC;
+﻿using Lightyear.Catalog.API.Abstractions;
+using Lightyear.Catalog.API.Publishers;
+using Lightyear.Catalog.IoC;
+using Lightyear.EventBus.Contracts;
+using MassTransit;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
@@ -6,6 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Swashbuckle.AspNetCore.Swagger;
+using System;
 
 namespace Lightyear.Catalog.API
 {
@@ -29,6 +34,21 @@ namespace Lightyear.Catalog.API
             {
                 c.SwaggerDoc("v1", new Info { Title = "Lightyear Catalog API", Version = "v1" });
             });
+
+            // Register MassTransit
+            services.AddMassTransit(x =>
+            {
+                x.AddBus(provider => Bus.Factory.CreateUsingRabbitMq(cfg =>
+                {
+                    var host = cfg.Host(new Uri("localhost"), hostConfigurator =>
+                    {
+                        hostConfigurator.Username("guest");
+                        hostConfigurator.Password("guest");
+                    });
+                }));
+            });
+
+            services.AddScoped<IProductEventPublisher, ProductEventPublisher>();
 
             IOCContainerConfig.ConfigureServices(services);
         }
@@ -60,6 +80,8 @@ namespace Lightyear.Catalog.API
 
             app.UseHttpsRedirection();
             app.UseMvc();
+
+            EndpointConvention.Map<IUpdatedPrice>(new Uri(Configuration["CatalogServiceQueue"]));
         }
     }
 }

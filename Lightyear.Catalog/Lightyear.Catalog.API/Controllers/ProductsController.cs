@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
+using Lightyear.Catalog.API.Abstractions;
 using Lightyear.Catalog.Application.Abstractions;
 using Lightyear.Catalog.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
@@ -14,10 +12,12 @@ namespace Lightyear.Catalog.API.Controllers
     public class ProductsController : Controller
     {
         private readonly IProductService _productService;
+        private readonly IProductEventPublisher _productEventPublisher;
 
-        public ProductsController(IProductService productService)
+        public ProductsController(IProductService productService, IProductEventPublisher productEventPublisher)
         {
             _productService = productService;
+            _productEventPublisher = productEventPublisher;
         }
 
         // GET: api/products
@@ -47,10 +47,27 @@ namespace Lightyear.Catalog.API.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutAsync(int id, [FromBody]Product product)
         {
+            var notifyUpdatedPrice = false;
+
             if (id != product.Id)
                 return BadRequest();
 
+            var oldProduct = _productService.Find(id);
+            if (oldProduct == null)
+                return NotFound(id);
+
+            notifyUpdatedPrice = oldProduct.Value != product.Value;
+
             await _productService.UpdateAsync(product);
+
+            if (notifyUpdatedPrice)
+            {
+                await _productEventPublisher.NotifyUpdatedPriceAsync(new
+                {
+                    ProductID = product.Id,
+                    NewValue = product.Value
+                });
+            }
 
             return Ok();
         }
