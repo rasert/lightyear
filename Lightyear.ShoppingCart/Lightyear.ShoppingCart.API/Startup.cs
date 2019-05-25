@@ -25,6 +25,12 @@ namespace Lightyear.ShoppingCart.API
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
+            services.AddStackExchangeRedisCache(options =>
+            {
+                options.Configuration = "localhost";
+                options.InstanceName = "SampleInstance";
+            });
+
             // Register MassTransit
             services.AddMassTransit(x =>
             {
