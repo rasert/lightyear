@@ -1,11 +1,11 @@
-﻿using System.Collections.Generic;
-using Lightyear.ShoppingCart.Domain.Abstractions;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Lightyear.ShoppingCart.Domain.Entities
 {
-    public class ShoppingBasket: IEntity
+    public class ShoppingBasket
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public List<ShoppingItem> Items { get; set; }
     }
 }

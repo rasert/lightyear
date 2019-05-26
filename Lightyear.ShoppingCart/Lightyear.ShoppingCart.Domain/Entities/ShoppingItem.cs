@@ -5,6 +5,6 @@
         public int ProductId { get; set; }
         public decimal ProductValue { get; set; }
         public int Quantity { get; set; }
-        // TODO: Total value
+        public decimal TotalValue { get => ProductValue * Quantity; }
     }
 }

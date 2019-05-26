@@ -6,7 +6,7 @@ namespace Lightyear.ShoppingCart.Application.Abstractions
 {
     public interface IShoppingBasketService
     {
-        Task AddAsync(ShoppingBasket basket);
+        Task<ShoppingBasket> NewBasketAsync();
         Task UpdateAsync(ShoppingBasket basket);
         Task RemoveAsync(ShoppingBasket basket);
         Task<ShoppingBasket> FindAsync(string id);
