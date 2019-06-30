@@ -5,7 +5,7 @@
     <DockerTargetOS>Linux</DockerTargetOS>
     <ProjectGuid>{A5CD90D1-8D45-4016-989B-F8EEA4C58DAD}</ProjectGuid>
     <DockerLaunchBrowser>True</DockerLaunchBrowser>
-    <DockerServiceUrl>http://localhost:{ServicePort}/api/values</DockerServiceUrl>
+    <DockerServiceUrl>http://localhost:{ServicePort}/swagger</DockerServiceUrl>
     <DockerServiceName>lightyear.shoppingcart.api</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>

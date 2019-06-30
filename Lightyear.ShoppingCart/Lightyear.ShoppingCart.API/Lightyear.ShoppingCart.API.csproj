@@ -24,4 +24,8 @@
       <HintPath>..\..\Lightyear.EventBus\Lightyear.EventBus\bin\Release\netcoreapp2.2\Lightyear.EventBus.dll</HintPath>
     </Reference>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Lightyear.ShoppingCart.Application\Lightyear.ShoppingCart.Application.csproj" />
+    <ProjectReference Include="..\Lightyear.ShoppingCart.Domain\Lightyear.ShoppingCart.Domain.csproj" />
+  </ItemGroup>
 </Project>

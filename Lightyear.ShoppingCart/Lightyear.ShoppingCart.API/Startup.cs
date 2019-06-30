@@ -1,6 +1,8 @@
 ﻿using System;
 using GreenPipes;
 using Lightyear.ShoppingCart.API.Consumers;
+using Lightyear.ShoppingCart.Application.Abstractions;
+using Lightyear.ShoppingCart.Application.Services;
 using MassTransit;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
@@ -26,6 +28,8 @@ namespace Lightyear.ShoppingCart.API
         {
             services.AddHealthChecks();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            services.AddScoped<IShoppingBasketService, ShoppingBasketService>();
 
             // Register the Swagger generator, defining 1 or more Swagger documents
             services.AddSwaggerGen(c =>
