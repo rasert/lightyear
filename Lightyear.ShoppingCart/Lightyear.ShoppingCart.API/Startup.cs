@@ -39,8 +39,8 @@ namespace Lightyear.ShoppingCart.API
 
             services.AddStackExchangeRedisCache(options =>
             {
-                options.Configuration = "localhost";
-                options.InstanceName = "SampleInstance";
+                options.Configuration = "lightyear.redis";
+                options.InstanceName = "LightyearInstance";
             });
 
             // Register MassTransit

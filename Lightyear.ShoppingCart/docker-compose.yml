@@ -1,4 +1,4 @@
-version: '3.4'
+﻿version: '3.4'
 
 services:
   lightyear.shoppingcart.api:
@@ -6,3 +6,8 @@ services:
     build:
       context: .
       dockerfile: Lightyear.ShoppingCart.API/Dockerfile
+    depends_on:
+      - lightyear.redis
+
+  lightyear.redis:
+    image: redis:alpine
