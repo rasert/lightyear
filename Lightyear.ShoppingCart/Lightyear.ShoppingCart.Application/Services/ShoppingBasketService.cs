@@ -18,9 +18,10 @@ namespace Lightyear.ShoppingCart.Application.Services
             _cache = cache;
         }
 
-        private async Task AddAsync(ShoppingBasket basket)
+        public async Task AddAsync(ShoppingBasket basket)
         {
-            await _cache.SetAsync(basket.Id.ToString(), Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(basket.Items)));
+            basket.Id = Guid.NewGuid();
+            await _cache.SetAsync(basket.Id.ToString(), Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(basket)));
         }
 
         public async Task<ShoppingBasket> FindAsync(string id)
@@ -31,26 +32,12 @@ namespace Lightyear.ShoppingCart.Application.Services
 
         public async Task UpdateAsync(ShoppingBasket basket)
         {
-            await RemoveAsync(basket);
-            await AddAsync(basket);
+            await _cache.SetAsync(basket.Id.ToString(), Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(basket)));
         }
 
         public async Task RemoveAsync(ShoppingBasket basket)
         {
             await _cache.RemoveAsync(basket.Id.ToString());
-        }
-
-        public async Task<ShoppingBasket> NewBasketAsync()
-        {
-            var basket = new ShoppingBasket()
-            {
-                Id = Guid.NewGuid(),
-                Items = new List<ShoppingItem>()
-            };
-
-            await AddAsync(basket);
-
-            return basket;
         }
     }
 }
