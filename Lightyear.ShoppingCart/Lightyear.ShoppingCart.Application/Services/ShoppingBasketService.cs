@@ -27,6 +27,9 @@ namespace Lightyear.ShoppingCart.Application.Services
         public async Task<ShoppingBasket> FindAsync(string id)
         {
             var basketBytes = await _cache.GetAsync(id);
+            if (basketBytes == null)
+                return null;
+
             return JsonConvert.DeserializeObject<ShoppingBasket>(Encoding.UTF8.GetString(basketBytes));
         }
 
