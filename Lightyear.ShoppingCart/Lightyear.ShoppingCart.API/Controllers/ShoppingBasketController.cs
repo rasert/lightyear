@@ -1,4 +1,6 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using Lightyear.ShoppingCart.Application.Abstractions;
 using Lightyear.ShoppingCart.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
@@ -18,11 +20,11 @@ namespace Lightyear.ShoppingCart.API.Controllers
         }
 
         // GET: api/shoppingbasket
-        //[HttpGet]
-        //public IEnumerable<string> GetAsync()
-        //{
-        //    throw new NotImplementedException();
-        //}
+        [HttpGet]
+        public async Task<IActionResult> GetAsync()
+        {
+            return Ok(await _shoppingBasketService.GetAllAsync());
+        }
 
         // GET api/shoppingbasket/5
         [HttpGet("{id}")]
